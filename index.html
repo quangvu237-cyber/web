@@ -116,22 +116,9 @@
         padding: 30px;
     }
 
-        /* Giả lập khung điện thoại */
-        .phone-mockup {
-            position: relative;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
         .phone-mockup img {
             width: 100%;
             border-radius: 40px;
-        }
-
-        /* Responsive cho thiết bị di động */
-        @media (max-width: 992px) {
-            .main-title { font-size: 3rem; }
-            .feature-card { position: relative; left: 0; bottom: 0; margin-top: 20px; width: 100%; }
         }
     .how-we-work-section {
         background-color: #ffffff;
@@ -401,23 +388,101 @@
     transition: all 0.3s ease;
 }
 
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+
+    /* HERO */
+    .main-title {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .sub-text {
+        text-align: center;
+        margin: 0 auto 2rem;
+    }
+
+    .hero-section .btn {
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Feature card */
+    .feature-card {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* No risk box */
+    .box {
+        height: auto;
+    }
+
+    /* Process section */
+    .process-item,
+    .process-item.left,
+    .process-item.right {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .process-item::after {
+        display: none;
+    }
+
+    .step {
+        margin: 0 auto 12px;
+    }
+
+    /* Footer */
+    .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .main-title {
+        font-size: 3rem;
+    }
+}
+
+
 </style>
 <body>
     <!-- <header class="py-3 border-bottom"> -->
     <div class="container">
-        <nav class="navbar navbar-expand-lg bg-light sticky-top">
-            <div class="container w-full p-2">
-            <div class=" col-4 col-md-6">
-                <img src="img/12.jpg" alt="">
-                </div>
-                <div class=" col-8 col-md-6 d-flex justify-content-end align-items-center">
-                    <a href="#" class="me-3 text-decoration-none text-dark">Abouts</a>
-                    <a href="#" class="me-3 text-decoration-none text-dark">process</a>
-                    <a href="#" class="me-3 text-decoration-none text-dark">careers</a>
-                    <a href="#" class="text-decoration-none text-dark">why Alongside</a> 
-                </div>
+      <nav class="navbar navbar-expand-lg bg-light sticky-top">
+    <div class="container">
+        <div class="row w-100 align-items-center">
+
+            <div class="col-6 col-lg-3">
+                <img src="img/12.jpg" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-6 col-lg-9 d-flex justify-content-end align-items-center gap-3">
+                <a href="#" class="text-decoration-none text-dark">Abouts</a>
+                <a href="#" class="text-decoration-none text-dark">Process</a>
+                <a href="#" class="text-decoration-none text-dark">Careers</a>
+                <a href="#" class="text-decoration-none text-dark">Why Alongside</a>
+            </div>
+
         </div>
-    </nav>
+    </div>
+</nav>
+
         <section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
@@ -518,7 +583,7 @@
         </div>
     </div>
 </section>
-<div class="container3">
+<div class="container container3">
     <h3  class="text-center" ><b>No risk guarantee</b></h3>
     <h1   class="text-center" ><b>Our No-Risk Promise</b></h1>
 
